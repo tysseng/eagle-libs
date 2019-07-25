@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -203,25 +203,37 @@ Library created by Rob Kam of a few CEM music synthesizer ICs. More info about t
 <pin name="14" x="7.62" y="2.54" visible="pad" length="short" direction="in" rot="R180"/>
 <pin name="15" x="7.62" y="5.08" visible="pad" length="short" direction="in" rot="R180"/>
 <pin name="16" x="7.62" y="7.62" visible="pad" length="short" direction="pwr" rot="R180"/>
-<text x="0.635" y="-6.985" size="1.778" layer="96" rot="R90">CEM 3340</text>
+<text x="0.635" y="-3.81" size="1.778" layer="96" rot="R90">3340</text>
 <text x="-4.445" y="9.525" size="1.778" layer="95">&gt;NAME</text>
 <text x="-5.08" y="7.62" size="0.381" layer="94" align="center-left"></text>
-<text x="-5.08" y="7.62" size="0.508" layer="94" align="center-left">  Multiplier gain</text>
-<text x="-5.08" y="5.08" size="0.508" layer="94" align="center-left">  Multiplier gain</text>
-<text x="-5.08" y="2.54" size="0.508" layer="94" align="center-left">   Vee</text>
-<text x="-5.08" y="0" size="0.508" layer="94">   Pulse out</text>
-<text x="-5.08" y="-2.54" size="0.508" layer="94" align="center-left">   PWM control</text>
-<text x="-5.08" y="-5.08" size="0.508" layer="94" align="center-left">   Hard sync in</text>
-<text x="-5.08" y="-7.62" size="0.508" layer="94" align="center-left">   I correction</text>
-<text x="-5.08" y="-10.16" size="0.508" layer="94" align="center-left">   Sawtooth out</text>
-<text x="5.08" y="-10.16" size="0.508" layer="94" align="center-right">Soft sync in   </text>
-<text x="5.08" y="-7.62" size="0.508" layer="94" align="center-right">Triangle out   </text>
-<text x="5.08" y="-5.08" size="0.508" layer="94" align="center-right">Timing cap   </text>
-<text x="5.08" y="-2.54" size="0.508" layer="94" align="center-right">Ground   </text>
-<text x="5.08" y="0" size="0.508" layer="94" align="center-right">Linear control   </text>
-<text x="5.08" y="2.54" size="0.508" layer="94" align="center-right">Scale   </text>
-<text x="5.08" y="5.08" size="0.508" layer="94" align="center-right">Freq control   </text>
-<text x="5.08" y="7.62" size="0.508" layer="94" align="center-right">Vcc   </text>
+<text x="-4.445" y="7.62" size="0.508" layer="94" align="center-left">Scale
+adjust 1</text>
+<text x="-4.445" y="5.08" size="0.508" layer="94" align="center-left">Scale
+adjust 2</text>
+<text x="-4.445" y="2.54" size="0.508" layer="94" align="center-left">Vee</text>
+<text x="-4.445" y="-0.635" size="0.508" layer="94">Pulse
+out</text>
+<text x="-4.445" y="-2.54" size="0.508" layer="94" align="center-left">PWM
+control</text>
+<text x="-4.445" y="-5.08" size="0.508" layer="94" align="center-left">Hard 
+sync in</text>
+<text x="-4.445" y="-7.62" size="0.508" layer="94" align="center-left">HF
+track</text>
+<text x="-4.445" y="-10.16" size="0.508" layer="94" align="center-left">Sawtooth 
+out</text>
+<text x="4.445" y="-10.16" size="0.508" layer="94" align="center-right">Soft
+sync in</text>
+<text x="4.445" y="-7.62" size="0.508" layer="94" align="center-right">Triangle
+out</text>
+<text x="4.445" y="-5.08" size="0.508" layer="94" align="center-right">Timing
+cap</text>
+<text x="4.445" y="-2.54" size="0.508" layer="94" align="center-right">Ground</text>
+<text x="4.445" y="0" size="0.508" layer="94" align="center-right">Linear
+control</text>
+<text x="4.445" y="2.54" size="0.508" layer="94" align="center-right">Scale</text>
+<text x="4.445" y="5.08" size="0.508" layer="94" align="center-right">Freq
+control</text>
+<text x="4.445" y="7.62" size="0.508" layer="94" align="center-right">Vcc</text>
 </symbol>
 <symbol name="CEM3320">
 <description>CEM 3320 VCF</description>
@@ -452,4 +464,10 @@ Library created by Rob Kam of a few CEM music synthesizer ICs. More info about t
 </devicesets>
 </library>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>

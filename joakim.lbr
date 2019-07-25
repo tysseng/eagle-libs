@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -6468,6 +6468,62 @@ box</text>
 <pin name="D4" x="12.7" y="2.54" length="middle" direction="pas" rot="R180"/>
 <pin name="S4" x="-12.7" y="2.54" length="middle" direction="pas"/>
 </symbol>
+<symbol name="CEM3340">
+<description>CEM 3340 VCO</description>
+<wire x1="-5.08" y1="-11.43" x2="5.08" y2="-11.43" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-11.43" x2="5.08" y2="8.89" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-11.43" x2="-5.08" y2="8.89" width="0.254" layer="94"/>
+<wire x1="5.08" y1="8.89" x2="0.635" y2="8.89" width="0.254" layer="94"/>
+<wire x1="-0.635" y1="8.89" x2="-5.08" y2="8.89" width="0.254" layer="94"/>
+<wire x1="-0.635" y1="8.89" x2="0.635" y2="8.89" width="0.254" layer="94" curve="180"/>
+<pin name="1" x="-7.62" y="7.62" visible="pad" length="short"/>
+<pin name="2" x="-7.62" y="5.08" visible="pad" length="short"/>
+<pin name="3" x="-7.62" y="2.54" visible="pad" length="short" direction="pwr"/>
+<pin name="4" x="-7.62" y="0" visible="pad" length="short" direction="out"/>
+<pin name="5" x="-7.62" y="-2.54" visible="pad" length="short" direction="in"/>
+<pin name="6" x="-7.62" y="-5.08" visible="pad" length="short" direction="in"/>
+<pin name="7" x="-7.62" y="-7.62" visible="pad" length="short"/>
+<pin name="8" x="-7.62" y="-10.16" visible="pad" length="short" direction="out"/>
+<pin name="9" x="7.62" y="-10.16" visible="pad" length="short" direction="in" rot="R180"/>
+<pin name="10" x="7.62" y="-7.62" visible="pad" length="short" direction="out" rot="R180"/>
+<pin name="11" x="7.62" y="-5.08" visible="pad" length="short" rot="R180"/>
+<pin name="12" x="7.62" y="-2.54" visible="pad" length="short" direction="pwr" rot="R180"/>
+<pin name="13" x="7.62" y="0" visible="pad" length="short" direction="in" rot="R180"/>
+<pin name="14" x="7.62" y="2.54" visible="pad" length="short" direction="in" rot="R180"/>
+<pin name="15" x="7.62" y="5.08" visible="pad" length="short" direction="in" rot="R180"/>
+<pin name="16" x="7.62" y="7.62" visible="pad" length="short" direction="pwr" rot="R180"/>
+<text x="0.635" y="-3.81" size="1.778" layer="96" rot="R90">3340</text>
+<text x="-4.445" y="9.525" size="1.778" layer="95">&gt;NAME</text>
+<text x="-5.08" y="7.62" size="0.381" layer="94" align="center-left"></text>
+<text x="-4.445" y="7.62" size="0.508" layer="94" align="center-left">Scale
+adjust 1</text>
+<text x="-4.445" y="5.08" size="0.508" layer="94" align="center-left">Scale
+adjust 2</text>
+<text x="-4.445" y="2.54" size="0.508" layer="94" align="center-left">Vee</text>
+<text x="-4.445" y="-0.635" size="0.508" layer="94">Pulse
+out</text>
+<text x="-4.445" y="-2.54" size="0.508" layer="94" align="center-left">PWM
+control</text>
+<text x="-4.445" y="-5.08" size="0.508" layer="94" align="center-left">Hard 
+sync in</text>
+<text x="-4.445" y="-7.62" size="0.508" layer="94" align="center-left">HF
+track</text>
+<text x="-4.445" y="-10.16" size="0.508" layer="94" align="center-left">Sawtooth 
+out</text>
+<text x="4.445" y="-10.16" size="0.508" layer="94" align="center-right">Soft
+sync in</text>
+<text x="4.445" y="-7.62" size="0.508" layer="94" align="center-right">Triangle
+out</text>
+<text x="4.445" y="-5.08" size="0.508" layer="94" align="center-right">Timing
+cap</text>
+<text x="4.445" y="-2.54" size="0.508" layer="94" align="center-right">Ground</text>
+<text x="4.445" y="0" size="0.508" layer="94" align="center-right">Linear
+control</text>
+<text x="4.445" y="2.54" size="0.508" layer="94" align="center-right">Scale</text>
+<text x="4.445" y="5.08" size="0.508" layer="94" align="center-right">Freq
+control</text>
+<text x="4.445" y="7.62" size="0.508" layer="94" align="center-right">Vcc</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="LED_J" prefix="LED" uservalue="yes">
@@ -9019,6 +9075,37 @@ NS is without screw holes</description>
 <connect gate="A" pin="VCC" pad="8"/>
 <connect gate="A" pin="VE" pad="7"/>
 <connect gate="A" pin="VO" pad="6"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CEM3340" prefix="IC">
+<description>CEM 3340 VCO</description>
+<gates>
+<gate name="G$1" symbol="CEM3340" x="0" y="1.27"/>
+</gates>
+<devices>
+<device name="J" package="DIL16J">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="10" pad="10"/>
+<connect gate="G$1" pin="11" pad="11"/>
+<connect gate="G$1" pin="12" pad="12"/>
+<connect gate="G$1" pin="13" pad="13"/>
+<connect gate="G$1" pin="14" pad="14"/>
+<connect gate="G$1" pin="15" pad="15"/>
+<connect gate="G$1" pin="16" pad="16"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="8" pad="8"/>
+<connect gate="G$1" pin="9" pad="9"/>
 </connects>
 <technologies>
 <technology name=""/>
